@@ -3,9 +3,20 @@
 #include <fsl_debug_console.h>
 #include <fsl_device_registers.h>
 #include <board.h>
+#include "Driver_I2C.h"
+//#include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RT
+#include <string.h>
 
 //#include "ledmatrix.h"
 //#include "accelerometer.h"
+
+/* I2C Driver */
+extern ARM_DRIVER_I2C Driver_I2C0;
+static ARM_DRIVER_I2C * I2Cdrv = &Driver_I2C0;
+
+
+
+
 
 ACCELEROMETER_STATE state;
 int seconds;
