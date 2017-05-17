@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\headsUp.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\headsUp.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed May 17 01:15:02 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed May 17 15:25:35 2017
 <BR><P>
 <H3>Maximum Stack Usage =        248 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -709,7 +709,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT_inner
 </UL>
 
-<P><STRONG><a name="[121]"></a>Accelerometer_GetState</STRONG> (Thumb, 216 bytes, Stack size 32 bytes, fxos8700.o(i.Accelerometer_GetState))
+<P><STRONG><a name="[122]"></a>Accelerometer_GetState</STRONG> (Thumb, 216 bytes, Stack size 32 bytes, fxos8700.o(i.Accelerometer_GetState))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Accelerometer_GetState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1350,25 +1350,27 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SYS_OscInit
 </UL>
 
-<P><STRONG><a name="[6a]"></a>PIT0_IRQHandler</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, main.o(i.PIT0_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = PIT0_IRQHandler &rArr; game_over &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
+<P><STRONG><a name="[6a]"></a>PIT0_IRQHandler</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, main.o(i.PIT0_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = PIT0_IRQHandler &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
-<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_over
+<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_over
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(RESET)
 </UL>
-<P><STRONG><a name="[6b]"></a>PIT1_IRQHandler</STRONG> (Thumb, 158 bytes, Stack size 8 bytes, main.o(i.PIT1_IRQHandler))
+<P><STRONG><a name="[6b]"></a>PIT1_IRQHandler</STRONG> (Thumb, 170 bytes, Stack size 8 bytes, main.o(i.PIT1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = PIT1_IRQHandler &rArr; print_next &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
-<BR>[Calls]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Accelerometer_GetState
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_next
+<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Accelerometer_GetState
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_next
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(RESET)
 </UL>
 <P><STRONG><a name="[75]"></a>PORTA_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main.o(i.PORTA_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = PORTA_IRQHandler &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
+<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(RESET)
 </UL>
@@ -1418,7 +1420,7 @@ Global Symbols
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fput_pad
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
+<BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
 </UL>
 
 <P><STRONG><a name="[12b]"></a>configure_uart_pins</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, pin_mux.o(i.configure_uart_pins))
@@ -1440,23 +1442,25 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hardware_init
 </UL>
 
-<P><STRONG><a name="[123]"></a>debug_printf</STRONG> (Thumb, 52 bytes, Stack size 32 bytes, fsl_debug_console.o(i.debug_printf))
+<P><STRONG><a name="[120]"></a>debug_printf</STRONG> (Thumb, 52 bytes, Stack size 32 bytes, fsl_debug_console.o(i.debug_printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
 <BR>[Calls]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_doprint
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_next
+<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_next
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_over
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_over
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORTA_IRQHandler
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT1_IRQHandler
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[120]"></a>game_over</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(i.game_over))
+<P><STRONG><a name="[121]"></a>game_over</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(i.game_over))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = game_over &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
+<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_next
+<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_next
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT0_IRQHandler
 </UL>
 
@@ -1479,21 +1483,21 @@ Global Symbols
 <LI>Call Chain = main &rArr; print_next &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hardware_init
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Accelerometer_Initialize
-<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Accelerometer_GetState
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Accelerometer_GetState
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_setup
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_next
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_next
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[122]"></a>print_next</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, main.o(i.print_next))
+<P><STRONG><a name="[123]"></a>print_next</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, main.o(i.print_next))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = print_next &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_over
+<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_over
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT1_IRQHandler

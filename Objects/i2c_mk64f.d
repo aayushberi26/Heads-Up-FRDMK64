@@ -6,14 +6,14 @@
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\i2c_mk64f.o: C:\Users\AayushBeri\Documents\CS3420\Heads-Up-FRDMK64\RTE\Device\MK64FN1M0VLL12\RTE_Device.h
-.\objects\i2c_mk64f.o: C:\Users\AayushBeri\Documents\CS3420\Heads-Up-FRDMK64\RTE\_Target_1\RTE_Components.h
+.\objects\i2c_mk64f.o: C:\School\Sem 4\CS 3420\Final Project\Heads-Up-FRDMK64\RTE\Device\MK64FN1M0VLL12\RTE_Device.h
+.\objects\i2c_mk64f.o: C:\School\Sem 4\CS 3420\Final Project\Heads-Up-FRDMK64\RTE\_Target_1\RTE_Components.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_SDK_DFP\2.2.0\platform\devices\fsl_device_registers.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_SDK_DFP\2.2.0\platform\devices\MK64F12/include/MK64F12.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\core_cm4.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_compiler.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_armcc.h
-.\objects\i2c_mk64f.o: C:\Users\AayushBeri\Documents\CS3420\Heads-Up-FRDMK64\RTE\Device\MK64FN1M0VLL12\system_MK64F12.h
+.\objects\i2c_mk64f.o: C:\School\Sem 4\CS 3420\Final Project\Heads-Up-FRDMK64\RTE\Device\MK64FN1M0VLL12\system_MK64F12.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_SDK_DFP\2.2.0\platform\devices\MK64F12/include/MK64F12_extension.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_SDK_DFP\2.2.0\platform\devices\MK64F12/include/MK64F12.h
 .\objects\i2c_mk64f.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_SDK_DFP\2.2.0\platform\devices\MK64F12/include/fsl_bitaccess.h

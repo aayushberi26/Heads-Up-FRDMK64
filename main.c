@@ -53,11 +53,11 @@ void PIT0_IRQHandler(void)
 {
 	  /* code goes here */
 	seconds++;
+	debug_printf("%d\r\n", 60-seconds);
 	if (seconds==59) game_over();
 	else {
 		//Accelerometer_GetState(&state);
-		//debug_printf("hi\r\n");
-		//debug_printf("%5d %5d %5d\r\n", state.x, state.y, state.z);
+		debug_printf("%5d %5d %5d\r\n", state.x, state.y, state.z);
 		PIT->CHANNEL[0].LDVAL = 61500000;
 		PIT->CHANNEL[0].TCTRL = (3 << 0);
 		PIT->CHANNEL[0].TFLG =1;
@@ -84,11 +84,11 @@ void PIT1_IRQHandler(void)
 		if(state.x > -600 || state.x < -1400) {
 			//debug_printf("%5d %5d %5d\r\n", state.x, state.y, state.z);
 			if (state.x > -600) {
-				//debug_printf("correct\r\n");
+				debug_printf("correct\r\n");
 				words_correct++;
 			}
 			else {
-				//debug_printf("incorrect\r\n");
+				debug_printf("incorrect\r\n");
 				words_incorrect++;
 			}
 			for(int i = 0; i < 10000000; i++) {};
@@ -232,9 +232,9 @@ int main() {
 	int selected = 0;
 	for(int i = 0; i < 30000000; i++) {};
 	while (!selected) {
-		//debug_printf("incorrect\r\n");
+		//debug_printf("incorrect\r\n")
 		Accelerometer_GetState(&state);
-		//debug_printf("%5d \r\n", state.y);
+		//normal ranges: x:-1000,-800, y:-100,100, z:-400,-200
 			if (state.x > -600 && state.y > -120 && state.y < 130) {
 				debug_printf("Nerd\r\n");
 				selected = 1;
