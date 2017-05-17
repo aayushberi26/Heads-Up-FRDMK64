@@ -34,7 +34,7 @@ void timer_setup (void) {
 	PIT->MCR = (0 << 1);
 	PIT->CHANNEL[0].LDVAL = 61500000;
 	PIT->CHANNEL[0].TCTRL = (3 << 0); // Enable timer and also enable interrupt
-	PIT->CHANNEL[1].LDVAL = 200000;
+	PIT->CHANNEL[1].LDVAL = 500000;
 	PIT->CHANNEL[1].TCTRL = (3 << 0); // Enable timer and also enable interrupt
 	NVIC_SetPriority(PIT0_IRQn, 0);
 	NVIC_SetPriority(PIT1_IRQn, 1);
@@ -57,7 +57,7 @@ void PIT0_IRQHandler(void)
 	if (seconds==59) game_over();
 	else {
 		//Accelerometer_GetState(&state);
-		debug_printf("%5d %5d %5d\r\n", state.x, state.y, state.z);
+		//debug_printf("%5d %5d %5d\r\n", state.x, state.y, state.z);
 		PIT->CHANNEL[0].LDVAL = 61500000;
 		PIT->CHANNEL[0].TCTRL = (3 << 0);
 		PIT->CHANNEL[0].TFLG =1;
@@ -81,13 +81,13 @@ void PIT1_IRQHandler(void)
 {
 		if(seconds != 59) {
 		Accelerometer_GetState(&state);
-		if(state.x > -600 || state.x < -1400) {
+		if(state.x > -200 || state.x < -1900) {
 			//debug_printf("%5d %5d %5d\r\n", state.x, state.y, state.z);
-			if (state.x > -600) {
+			if (state.x > -500) {
 				debug_printf("correct\r\n");
 				words_correct++;
 			}
-			else {
+			else if (state.x < -1900) {
 				debug_printf("incorrect\r\n");
 				words_incorrect++;
 			}
@@ -107,7 +107,7 @@ void PIT1_IRQHandler(void)
 					break;
 			}
 		}
-		PIT->CHANNEL[1].LDVAL = 200000;
+		PIT->CHANNEL[1].LDVAL = 500000;
 		PIT->CHANNEL[1].TCTRL = (3 << 0);
 		PIT->CHANNEL[1].TFLG =1;
 		}
@@ -230,27 +230,27 @@ int main() {
 	debug_printf("Welcome to Heads Up! Choose your category: \r\n swipe up for sports, down for nerdy stuff, left for music or right for movies. \r\n");
 	
 	int selected = 0;
-	for(int i = 0; i < 30000000; i++) {};
+	for(int i = 0; i < 5000000; i++) {};
 	while (!selected) {
 		//debug_printf("incorrect\r\n")
 		Accelerometer_GetState(&state);
 		//normal ranges: x:-1000,-800, y:-100,100, z:-400,-200
-			if (state.x > -600 && state.y > -120 && state.y < 130) {
+			if (state.x > -500) {
 				debug_printf("Nerd\r\n");
 				selected = 1;
 				mode = 1;
 			}
-			else if (state.x < -1400 && state.y > -120 && state.y < 130) {
+			else if (state.x < -1900) {
 				debug_printf("Sports\r\n");
 				selected = 1;
 				mode = 2;
 			}
-			else if (state.y < -120 && state.x > -1400 && state.x < -600) {
+			else if (state.y > 650 && state.x > -1800 && state.x < -600) {
 				debug_printf("Music\r\n");
 				selected = 1;
 				mode = 3;
 			}
-			else if (state.y > 130 && state.x > -1400 && state.x < -600) {
+			else if (state.y < -650 && state.x > -1800 && state.x < -600) {
 				debug_printf("Movies\r\n");
 				selected = 1;
 				mode = 4;
