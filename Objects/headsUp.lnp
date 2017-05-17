@@ -1,5 +1,6 @@
 --cpu=Cortex-M4.fp
 ".\objects\main.o"
+".\objects\ledmatrix.o"
 ".\objects\fxos8700.o"
 ".\objects\i2c_mk64f.o"
 ".\objects\board.o"
@@ -14,6 +15,7 @@
 ".\objects\fsl_rtc_common.o"
 ".\objects\fsl_rtc_driver.o"
 ".\objects\fsl_dmamux_hal.o"
+".\objects\fsl_dspi_hal.o"
 ".\objects\fsl_edma_hal.o"
 ".\objects\fsl_gpio_hal.o"
 ".\objects\fsl_i2c_hal.o"

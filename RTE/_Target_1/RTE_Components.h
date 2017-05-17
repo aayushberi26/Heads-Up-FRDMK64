@@ -41,8 +41,5 @@
 #define RTE_Drivers_I2C0                /* Driver I2C0 */
         #define RTE_Drivers_I2C1                /* Driver I2C1 */
         #define RTE_Drivers_I2C2                /* Driver I2C2 */
-#define RTE_Drivers_SPI0                /* Driver SPI0 */
-        #define RTE_Drivers_SPI1                /* Driver SPI1 */
-        #define RTE_Drivers_SPI2                /* Driver SPI2 */
 
 #endif /* RTE_COMPONENTS_H */
