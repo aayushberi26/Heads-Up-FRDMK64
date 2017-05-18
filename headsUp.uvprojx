@@ -380,14 +380,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>play_maze.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>ledmatrix.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ledmatrix.c</FilePath>
+              <FilePath>.\play_maze.c</FilePath>
             </File>
           </Files>
         </Group>

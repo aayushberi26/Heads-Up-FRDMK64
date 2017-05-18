@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\headsUp.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\headsUp.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed May 17 22:17:11 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed May 17 23:15:56 2017
 <BR><P>
 <H3>Maximum Stack Usage =        248 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -116,11 +116,11 @@ Function Pointers
  <LI><a href="#[33]">MemManage_Handler</a> from startup_mk64f12.o(.text) referenced from startup_mk64f12.o(RESET)
  <LI><a href="#[31]">NMI_Handler</a> from startup_mk64f12.o(.text) referenced from startup_mk64f12.o(RESET)
  <LI><a href="#[6e]">PDB0_IRQHandler</a> from startup_mk64f12.o(.text) referenced from startup_mk64f12.o(RESET)
- <LI><a href="#[6a]">PIT0_IRQHandler</a> from main.o(i.PIT0_IRQHandler) referenced from startup_mk64f12.o(RESET)
- <LI><a href="#[6b]">PIT1_IRQHandler</a> from main.o(i.PIT1_IRQHandler) referenced from startup_mk64f12.o(RESET)
+ <LI><a href="#[6a]">PIT0_IRQHandler</a> from headsup.o(i.PIT0_IRQHandler) referenced from startup_mk64f12.o(RESET)
+ <LI><a href="#[6b]">PIT1_IRQHandler</a> from headsup.o(i.PIT1_IRQHandler) referenced from startup_mk64f12.o(RESET)
  <LI><a href="#[6c]">PIT2_IRQHandler</a> from startup_mk64f12.o(.text) referenced from startup_mk64f12.o(RESET)
  <LI><a href="#[6d]">PIT3_IRQHandler</a> from startup_mk64f12.o(.text) referenced from startup_mk64f12.o(RESET)
- <LI><a href="#[75]">PORTA_IRQHandler</a> from main.o(i.PORTA_IRQHandler) referenced from startup_mk64f12.o(RESET)
+ <LI><a href="#[75]">PORTA_IRQHandler</a> from headsup.o(i.PORTA_IRQHandler) referenced from startup_mk64f12.o(RESET)
  <LI><a href="#[76]">PORTB_IRQHandler</a> from startup_mk64f12.o(.text) referenced from startup_mk64f12.o(RESET)
  <LI><a href="#[77]">PORTC_IRQHandler</a> from startup_mk64f12.o(.text) referenced from startup_mk64f12.o(RESET)
  <LI><a href="#[78]">PORTD_IRQHandler</a> from startup_mk64f12.o(.text) referenced from startup_mk64f12.o(RESET)
@@ -1376,7 +1376,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SYS_OscInit
 </UL>
 
-<P><STRONG><a name="[6a]"></a>PIT0_IRQHandler</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, main.o(i.PIT0_IRQHandler))
+<P><STRONG><a name="[6a]"></a>PIT0_IRQHandler</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, headsup.o(i.PIT0_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = PIT0_IRQHandler &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
@@ -1384,7 +1384,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(RESET)
 </UL>
-<P><STRONG><a name="[6b]"></a>PIT1_IRQHandler</STRONG> (Thumb, 180 bytes, Stack size 8 bytes, main.o(i.PIT1_IRQHandler))
+<P><STRONG><a name="[6b]"></a>PIT1_IRQHandler</STRONG> (Thumb, 180 bytes, Stack size 8 bytes, headsup.o(i.PIT1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = PIT1_IRQHandler &rArr; print_next &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
@@ -1393,7 +1393,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(RESET)
 </UL>
-<P><STRONG><a name="[75]"></a>PORTA_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main.o(i.PORTA_IRQHandler))
+<P><STRONG><a name="[75]"></a>PORTA_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, headsup.o(i.PORTA_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = PORTA_IRQHandler &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
@@ -1481,7 +1481,7 @@ Global Symbols
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[124]"></a>game_over</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(i.game_over))
+<P><STRONG><a name="[124]"></a>game_over</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, headsup.o(i.game_over))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = game_over &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
@@ -1504,7 +1504,7 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>init_data_bss</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, startup.o(i.init_data_bss))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk64f12.o(.text)
 </UL>
-<P><STRONG><a name="[9d]"></a>main</STRONG> (Thumb, 2788 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[9d]"></a>main</STRONG> (Thumb, 2788 bytes, Stack size 0 bytes, headsup.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
 <LI>Call Chain = main &rArr; print_next &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
@@ -1521,7 +1521,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[126]"></a>print_next</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, main.o(i.print_next))
+<P><STRONG><a name="[126]"></a>print_next</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, headsup.o(i.print_next))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = print_next &rArr; debug_printf &rArr; _doprint &rArr; fput_pad
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debug_printf
@@ -1531,7 +1531,7 @@ Global Symbols
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[133]"></a>shuffle</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, main.o(i.shuffle))
+<P><STRONG><a name="[133]"></a>shuffle</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, headsup.o(i.shuffle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = shuffle
 </UL>
 <BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
@@ -1539,7 +1539,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[132]"></a>timer_setup</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, main.o(i.timer_setup))
+<P><STRONG><a name="[132]"></a>timer_setup</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, headsup.o(i.timer_setup))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = timer_setup &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
@@ -1559,12 +1559,12 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[131]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, main.o(i.__NVIC_EnableIRQ))
+<P><STRONG><a name="[131]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, headsup.o(i.__NVIC_EnableIRQ))
 <BR><BR>[Called By]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_setup
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[135]"></a>__NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(i.__NVIC_SetPriority))
+<P><STRONG><a name="[135]"></a>__NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, headsup.o(i.__NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __NVIC_SetPriority
 </UL>
 <BR>[Called By]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_setup

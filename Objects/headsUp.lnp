@@ -1,6 +1,5 @@
 --cpu=Cortex-M4.fp
-".\objects\main.o"
-".\objects\ledmatrix.o"
+".\objects\headsup.o"
 ".\objects\fxos8700.o"
 ".\objects\i2c_mk64f.o"
 ".\objects\board.o"
